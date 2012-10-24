@@ -23,6 +23,8 @@
 
 include_recipe "postgresql::client"
 
+include_recipe "postgresql::set_data_directory"
+
 # randomly generate postgres password
 node.set_unless[:postgresql][:password][:postgres] = secure_password
 node.save unless Chef::Config[:solo]

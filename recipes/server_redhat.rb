@@ -20,6 +20,7 @@
 #
 
 include_recipe "postgresql::client"
+include_recipe "postgresql::set_data_directory"
 
 # Create a group and user like the package will.
 # Otherwise the templates fail.
